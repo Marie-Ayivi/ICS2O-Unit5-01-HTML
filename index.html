@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Unit5-01</title>
+  </head>
+  <body>
+    <h2>Guess a number from 1 to 6 and write it in the texbox.</h2>
+    <h3>click the button check to see if you got it right and then the button reveal to see the anwser</h3>
+    <input type="text" id="textbox">
+    <button onclick="document.getElementById('demo').innerHTML=getRndInteger(1,6)"id="button2">Reveal!</button>
+    <p id="demo"</p>
+    <br>    
+    <button onclick="myFunction()" id="button">Check!</button>
+    <p id="demo2"</p>
+   
+    <script>
+function getRndInteger(min,max) {
+ return Math.floor(Math.random() * (max - min + 1) ) + min;
+}    
+    </script>
+    <script>
+    document.getElementById("button").addEventListener
+    ("click", myFunction);
+      let number
+      let number2
+      function myFunction() {
+      number=document.getElementById("textbox").value;
+      number2=document.getElementById("demo2").value;
+      if (number=number2) {
+      greeting= "Corret!";
+      } else {
+       greeting="incorrect..."   
+      }
+      document.getElementById("demo2").innerHTML = greeting;
+      }
+    </script>
+    
+
+  </body>
+</html>
